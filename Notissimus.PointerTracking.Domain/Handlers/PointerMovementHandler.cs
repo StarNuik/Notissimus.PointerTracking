@@ -13,8 +13,19 @@ public class PointerMovementHandler(IPointerTrackingDb db)
             throw new ArgumentException("X, Y and T arrays are not of the same length");
         }
 
-        var entity = new PointerMovement(dto);
-
+        var entity = Entity(dto);
         await db.PointerMovements.AddAsync(entity);
+    }
+    
+    private static PointerMovement Entity(PointerMovementDto dto)
+    {
+        var entity = new PointerMovement
+        {
+            X = dto.X,
+            Y = dto.Y,
+            T = dto.T
+        };
+        
+        return entity;
     }
 }

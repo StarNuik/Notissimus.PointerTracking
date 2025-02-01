@@ -1,3 +1,4 @@
+using Notissimus.PointerTracking.Domain;
 using Notissimus.PointerTracking.Infrastructure;
 
 namespace MouseTracking.Api;
@@ -10,12 +11,13 @@ public static class Program
         
         var services = builder.Services;
         services.AddControllers();
-        services.AddInfrastructureServices();
+        services.AddDomain();
+        services.AddInfrastructure();
 
         var app = builder.Build();
         app.MapControllers();
         app.UseInfrastructure();
-
+        
         app.Run();
     }
 }

@@ -4,13 +4,7 @@ using Notissimus.PointerTracking.Domain.Interfaces;
 
 namespace Notissimus.PointerTracking.Infrastructure.Database;
 
-public class PointerTrackingDb : DbContext, IPointerTrackingDb
+public class PointerTrackingDb(DbContextOptions<PointerTrackingDb> options) : DbContext(options), IPointerTrackingDb
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder builder)
-    {
-        // builder.uses
-        base.OnConfiguring(builder);
-    }
-
     public DbSet<PointerMovement> PointerMovements { get; set; }
 }

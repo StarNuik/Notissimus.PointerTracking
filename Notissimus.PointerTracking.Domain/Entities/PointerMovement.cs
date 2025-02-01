@@ -10,12 +10,5 @@ public class PointerMovement
     public double[] X { get; set; }
     public double[] Y { get; set; }
     public long[] T { get; set; }
-
-    public PointerMovement(PointerMovementDto dto)
-    {
-        X = dto.X;
-        Y = dto.Y;
-        T = dto.T;
-    }
 }
     
