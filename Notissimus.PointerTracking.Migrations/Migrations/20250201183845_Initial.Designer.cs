@@ -10,7 +10,7 @@ using Notissimus.PointerTracking.Infrastructure.Database;
 namespace Notissimus.PointerTracking.Migrations.Migrations
 {
     [DbContext(typeof(PointerTrackingDb))]
-    [Migration("20250201180232_Initial")]
+    [Migration("20250201183845_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

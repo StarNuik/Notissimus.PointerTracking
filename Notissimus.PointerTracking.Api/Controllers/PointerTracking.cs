@@ -12,19 +12,18 @@ public class PointerTracking(
     PointerMovementHandler handler) : ControllerBase
 {
     [HttpPost(Name = "PostMouseTracking")]
-    public IActionResult Post(PointerMovementDto dto)
+    public async Task<IActionResult> Post(PointerMovementDto dto)
     {
         log.LogInformation(dto.ToString());
-        
+
         try
         {
-            handler.Save(dto);
+            var result = await handler.Insert(dto);
+            return Ok(result);
         }
         catch (ArgumentException e)
         {
             return BadRequest(e.Message);
         }
-        
-        return Ok();
     }
 }

@@ -11,7 +11,9 @@ public static class ServiceCollectionExtension
     {
         services.AddSwaggerGen();
 
-        services.AddDbContext<IPointerTrackingDb, PointerTrackingDb>(DbOptions.Set);
+        services.AddDbContext<IPointerTrackingDb, PointerTrackingDb>(
+            DbOptions.Set, ServiceLifetime.Singleton, ServiceLifetime.Scoped
+            );
         
         return services;
     }

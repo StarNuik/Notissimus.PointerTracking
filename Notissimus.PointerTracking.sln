@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notissimus.PointerTracking.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notissimus.PointerTracking.Infrastructure", "Notissimus.PointerTracking.Infrastructure\Notissimus.PointerTracking.Infrastructure.csproj", "{22E13F0D-D87B-4B2F-9A9C-FA2A2A115B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notissimus.PointerTracking.Migrations", "Notissimus.PointerTracking.Migrations\Notissimus.PointerTracking.Migrations.csproj", "{E35CA8FA-F474-4A6A-81E1-531EB77F2543}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notissimus.PointerTracking.Migrations", "Notissimus.PointerTracking.Migrations\Notissimus.PointerTracking.Migrations.csproj", "{30FD5B79-8A7D-49A7-874C-23D469518DCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,9 +37,9 @@ Global
 		{22E13F0D-D87B-4B2F-9A9C-FA2A2A115B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E13F0D-D87B-4B2F-9A9C-FA2A2A115B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E13F0D-D87B-4B2F-9A9C-FA2A2A115B02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E35CA8FA-F474-4A6A-81E1-531EB77F2543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E35CA8FA-F474-4A6A-81E1-531EB77F2543}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E35CA8FA-F474-4A6A-81E1-531EB77F2543}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E35CA8FA-F474-4A6A-81E1-531EB77F2543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FD5B79-8A7D-49A7-874C-23D469518DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FD5B79-8A7D-49A7-874C-23D469518DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FD5B79-8A7D-49A7-874C-23D469518DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FD5B79-8A7D-49A7-874C-23D469518DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

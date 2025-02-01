@@ -6,7 +6,7 @@ namespace Notissimus.PointerTracking.Domain.Handlers;
 
 public class PointerMovementHandler(IPointerTrackingDb db)
 {
-    public async Task Save(PointerMovementDto dto)
+    public async Task<long> Insert(PointerMovementDto dto)
     {
         if (dto.X.Length != dto.Y.Length || dto.X.Length != dto.T.Length)
         {
@@ -14,7 +14,8 @@ public class PointerMovementHandler(IPointerTrackingDb db)
         }
 
         var entity = Entity(dto);
-        await db.PointerMovements.AddAsync(entity);
+        var entry = await db.PointerMovements.AddAsync(entity);
+        return entry.Entity.Id;
     }
     
     private static PointerMovement Entity(PointerMovementDto dto)
