@@ -6,4 +6,5 @@ namespace Notissimus.PointerTracking.Domain.Interfaces;
 public interface IPointerTrackingDb : IDisposable
 {
     public DbSet<PointerMovement> PointerMovements { get; }
+    public Task Commit();
 }

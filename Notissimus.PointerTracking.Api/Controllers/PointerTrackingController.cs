@@ -7,15 +7,13 @@ namespace MouseTracking.Api.Controllers;
 
 [ApiController]
 [Route("api/pointer-tracking")]
-public class PointerTracking(
-    ILogger<PointerTracking> log,
+public class PointerTrackingController(
+    ILogger<PointerTrackingController> log,
     PointerMovementHandler handler) : ControllerBase
 {
     [HttpPost(Name = "PostMouseTracking")]
     public async Task<IActionResult> Post(PointerMovementDto dto)
     {
-        log.LogInformation(dto.ToString());
-
         try
         {
             var result = await handler.Insert(dto);
@@ -25,5 +23,13 @@ public class PointerTracking(
         {
             return BadRequest(e.Message);
         }
+    }
+
+    [HttpGet()]
+    public async Task<IActionResult> Get()
+    {
+        var data = await handler.SelectAll();
+        var json = JsonSerializer.Serialize(data);
+        return Ok(json);
     }
 }

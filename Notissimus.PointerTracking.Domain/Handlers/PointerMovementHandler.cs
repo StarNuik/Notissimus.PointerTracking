@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Notissimus.PointerTracking.Domain.Dtos;
 using Notissimus.PointerTracking.Domain.Entities;
 using Notissimus.PointerTracking.Domain.Interfaces;
@@ -15,7 +16,14 @@ public class PointerMovementHandler(IPointerTrackingDb db)
 
         var entity = Entity(dto);
         var entry = await db.PointerMovements.AddAsync(entity);
+        await db.Commit();
         return entry.Entity.Id;
+    }
+
+    public async Task<PointerMovement[]> SelectAll()
+    {
+        var result = await db.PointerMovements.ToArrayAsync();
+        return result;
     }
     
     private static PointerMovement Entity(PointerMovementDto dto)
