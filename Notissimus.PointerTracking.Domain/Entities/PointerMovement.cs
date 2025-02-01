@@ -7,8 +7,6 @@ namespace Notissimus.PointerTracking.Domain.Entities;
 public class PointerMovement
 {
     public long Id { get; set; }
-    public double[] X { get; set; }
-    public double[] Y { get; set; }
-    public long[] T { get; set; }
+    public string Json { get; set; }
 }
     

@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Notissimus.PointerTracking.Domain.Dtos;
 using Notissimus.PointerTracking.Domain.Entities;
@@ -17,6 +18,7 @@ public class PointerMovementHandler(IPointerTrackingDb db)
         var entity = Entity(dto);
         var entry = await db.PointerMovements.AddAsync(entity);
         await db.Commit();
+        
         return entry.Entity.Id;
     }
 
@@ -28,11 +30,10 @@ public class PointerMovementHandler(IPointerTrackingDb db)
     
     private static PointerMovement Entity(PointerMovementDto dto)
     {
+        var json = JsonSerializer.Serialize(dto);
         var entity = new PointerMovement
         {
-            X = dto.X,
-            Y = dto.Y,
-            T = dto.T
+            Json = json,
         };
         
         return entity;
