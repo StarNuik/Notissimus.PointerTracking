@@ -1,0 +1,6 @@
+﻿services:
+  notissimus.pointertracking.web:
+    image: notissimus.pointertracking.web
+    build:
+      context: .
+      dockerfile: Notissimus.PointerTracking.Web/Dockerfile

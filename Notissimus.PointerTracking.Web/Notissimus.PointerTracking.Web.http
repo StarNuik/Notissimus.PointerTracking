@@ -1,0 +1,6 @@
+@Notissimus.PointerTracking.Web_HostAddress = http://localhost:5087
+
+GET {{Notissimus.PointerTracking.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
