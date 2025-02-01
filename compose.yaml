@@ -4,3 +4,9 @@
     build:
       context: .
       dockerfile: Notissimus.PointerTracking.Web/Dockerfile
+
+  notissimus.pointertracking.api:
+    image: notissimus.pointertracking.api
+    build:
+      context: .
+      dockerfile: Notissimus.PointerTracking.Api/Dockerfile
