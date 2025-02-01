@@ -10,4 +10,14 @@
       <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="Microsoft.EntityFrameworkCore">
+        <HintPath>..\..\..\.nuget\packages\microsoft.entityframeworkcore\9.0.1\lib\net8.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Notissimus.PointerTracking.Domain\Notissimus.PointerTracking.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

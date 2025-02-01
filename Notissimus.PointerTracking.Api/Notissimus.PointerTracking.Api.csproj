@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Notissimus.PointerTracking.Domain\Notissimus.PointerTracking.Domain.csproj" />
       <ProjectReference Include="..\Notissimus.PointerTracking.Infrastructure\Notissimus.PointerTracking.Infrastructure.csproj" />
     </ItemGroup>
 
