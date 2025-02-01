@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Notissimus.PointerTracking.Domain.Dtos;
 using Notissimus.PointerTracking.Domain.Handlers;
@@ -16,8 +17,8 @@ public class PointerTrackingController(
     {
         try
         {
-            var result = await handler.Insert(dto);
-            return Ok(result);
+            var response = await handler.Insert(dto);
+            return OkJson(response);
         }
         catch (ArgumentException e)
         {
@@ -25,11 +26,16 @@ public class PointerTrackingController(
         }
     }
 
-    [HttpGet()]
+    [HttpGet]
     public async Task<IActionResult> Get()
     {
-        var data = await handler.SelectAll();
-        var json = JsonSerializer.Serialize(data);
+        var response = await handler.SelectAll();
+        return OkJson(response);
+    }
+
+    private IActionResult OkJson<T>(T response)
+    {
+        var json = JsonSerializer.Serialize(response);
         return Ok(json);
     }
 }
