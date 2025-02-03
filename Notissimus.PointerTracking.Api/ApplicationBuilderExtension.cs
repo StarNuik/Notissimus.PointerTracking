@@ -8,11 +8,11 @@ internal static class ApplicationBuilderExtension
     {
         var fileExts = new FileExtensionContentTypeProvider();
         fileExts.Mappings[".module.js"] = "module";
-        
+
         app.UseDefaultFiles();
         app.UseStaticFiles(new StaticFileOptions
         {
-            ContentTypeProvider = fileExts,
+            ContentTypeProvider = fileExts
         });
 
         return app;

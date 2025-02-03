@@ -12,14 +12,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Notissimus.PointerTracking.Domain\Notissimus.PointerTracking.Domain.csproj" />
-      <ProjectReference Include="..\Notissimus.PointerTracking.Infrastructure\Notissimus.PointerTracking.Infrastructure.csproj" />
+        <ProjectReference Include="..\Notissimus.PointerTracking.Domain\Notissimus.PointerTracking.Domain.csproj"/>
+        <ProjectReference Include="..\Notissimus.PointerTracking.Infrastructure\Notissimus.PointerTracking.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>

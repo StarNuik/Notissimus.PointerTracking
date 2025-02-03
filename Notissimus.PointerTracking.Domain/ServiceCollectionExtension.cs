@@ -8,7 +8,7 @@ public static class ServiceCollectionExtension
     public static IServiceCollection AddDomain(this IServiceCollection services)
     {
         services.AddSingleton<PointerMovementHandler>();
-        
+
         return services;
     }
 }

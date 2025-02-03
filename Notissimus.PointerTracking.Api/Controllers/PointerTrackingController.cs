@@ -1,5 +1,4 @@
 using System.Text.Json;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Notissimus.PointerTracking.Domain.Dtos;
 using Notissimus.PointerTracking.Domain.Handlers;

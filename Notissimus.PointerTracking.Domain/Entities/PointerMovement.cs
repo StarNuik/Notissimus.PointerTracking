@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Notissimus.PointerTracking.Domain.Dtos;
 
 namespace Notissimus.PointerTracking.Domain.Entities;
 
@@ -9,4 +8,3 @@ public class PointerMovement
     public long Id { get; set; }
     public string Json { get; set; }
 }
-    
