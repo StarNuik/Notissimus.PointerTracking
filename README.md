@@ -1,9 +1,13 @@
 
 ## Структура
 `PointerTracking.Api` - Апи сервер, ручки без логики
+
 `PointerTracking.Domain` - бизнес логика, сущности, дб интерфейс
+
 `PointerTracking.Infrastructure` - реализация дб, свагер
+
 `PointerTracking.Migrations` - хранилка миграций от `dotnet ef`
+
 `Tests.*` - тесты
 
 ## Архитектура
