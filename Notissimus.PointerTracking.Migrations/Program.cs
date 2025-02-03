@@ -5,8 +5,7 @@ using Notissimus.PointerTracking.Infrastructure.Database;
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 
-services.AddDbContext<IPointerTrackingDb, PointerTrackingDb>(
-    DbOptions.Set, ServiceLifetime.Singleton);
+services.AddDatabases(builder.Configuration);
 
 var app = builder.Build();
 

@@ -12,7 +12,7 @@ public class Program
         var services = builder.Services;
         services.AddControllers();
         services.AddDomain();
-        services.AddInfrastructure();
+        services.AddInfrastructure(builder.Configuration);
 
         var app = builder.Build();
         app.MapControllers();
