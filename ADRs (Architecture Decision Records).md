@@ -76,3 +76,6 @@
   - но фронт-енду с таким решением работать было бы ОЧ не удобно
     - будущее решение: reverse proxy: web и api спрятаны на одном url-е
 
+# 6. Мердж `PointerTracking.Web` и `PointerTracking.Api`
+## Почему
+- CORS

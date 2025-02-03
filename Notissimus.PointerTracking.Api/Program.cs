@@ -17,7 +17,9 @@ public static class Program
         var app = builder.Build();
         app.MapControllers();
         app.UseInfrastructure();
+        app.UseStaticServer();
         
         app.Run();
     }
+    
 }
