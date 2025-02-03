@@ -1,12 +1,13 @@
 
-[ADR](./ADRs%20(Architecture%20Decision%20Records).md)
-
 ## Структура
 `PointerTracking.Api` - Апи сервер, ручки без логики
 `PointerTracking.Domain` - бизнес логика, сущности, дб интерфейс
 `PointerTracking.Infrastructure` - реализация дб, свагер
 `PointerTracking.Migrations` - хранилка миграций от `dotnet ef`
 `Tests.*` - тесты
+
+## Архитектура
+[ADR](./ADRs%20(Architecture%20Decision%20Records).md)
 
 ## Запуск
 ```bash
@@ -17,6 +18,13 @@ cd Notissimus.PointerTracking.Migrations/
 dotnet ef database update
 # В браузере подключиться к "http://localhost"
 # Данные в таблице можно получить по "http://localhost/api/pointer-tracking"
+```
+
+## Тестовое окружение
+```bash
+(sudo) docker compose -f ./infra.compose.yaml up
+cd Notissimus.PointerTracking.Migrations/
+dotnet ef database update
 ```
 
 ## ТЗ
