@@ -9,7 +9,6 @@ namespace MouseTracking.Api.Controllers;
 [ApiController]
 [Route("api/pointer-tracking")]
 public class PointerTrackingController(
-    ILogger<PointerTrackingController> log,
     PointerMovementHandler handler) : ControllerBase
 {
     [HttpPost(Name = "PostMouseTracking")]
@@ -17,10 +16,8 @@ public class PointerTrackingController(
     {
         try
         {
-            log.LogInformation(dto.ToString());
             var response = await handler.Insert(dto);
-            // return OkJson(response);
-            return Ok();
+            return OkJson(response);
         }
         catch (ArgumentException e)
         {

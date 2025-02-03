@@ -3,7 +3,7 @@ using Notissimus.PointerTracking.Infrastructure;
 
 namespace MouseTracking.Api;
 
-public static class Program
+public class Program
 {
     public static void Main(string[] args)
     {
