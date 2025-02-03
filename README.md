@@ -16,6 +16,7 @@ cd Notissimus.PointerTracking
 cd Notissimus.PointerTracking.Migrations/
 dotnet ef database update
 # В браузере подключиться к "http://localhost"
+# Данные в таблице можно получить по "http://localhost/api/pointer-tracking"
 ```
 
 ## ТЗ

@@ -28,12 +28,18 @@ public class PointerTrackingController(
     public async Task<IActionResult> Get()
     {
         var response = await handler.SelectAll();
-        return OkJson(response);
+        
+        return OkJson(response, writeIndented: true);
     }
 
-    private IActionResult OkJson<T>(T response)
+    private IActionResult OkJson<T>(T response, bool writeIndented = false)
     {
-        var json = JsonSerializer.Serialize(response);
+        var opt = new JsonSerializerOptions(JsonSerializerOptions.Default)
+        {
+            WriteIndented = writeIndented
+        };
+
+        var json = JsonSerializer.Serialize(response, opt);
         return Ok(json);
     }
 }
